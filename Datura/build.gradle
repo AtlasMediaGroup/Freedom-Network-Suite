@@ -11,13 +11,9 @@ repositories {
 
 dependencies {
     compileOnly project(":Patchwork")
+    testCompileOnly project(":Patchwork")
 
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation("org.yaml:snakeyaml:1.33")
 }
 
 var weight = 2
-
-test {
-    useJUnitPlatform()
-}
